@@ -8,6 +8,6 @@ public record VideogameResponse (
         String category,
         Boolean isAdult,
         String platform,
-        Long year
+        int year
 ){
 }
