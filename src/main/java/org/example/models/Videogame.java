@@ -8,7 +8,7 @@ import lombok.*;
 @NoArgsConstructor @AllArgsConstructor
 @Getter @Setter
 @Builder
-public class Videogames {
+public class Videogame {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -27,4 +27,10 @@ public class Videogames {
 
     @Column(nullable = false)
     private Long year;
+
+    @ManyToOne
+    @JoinColumn(name = "developer_id", nullable = false)
+    @ToString.Exclude
+    @EqualsAndHashCode.Exclude
+    private Developer developer;
 }
