@@ -21,6 +21,13 @@ public class VideogameMapperImpl implements VideogameMapper {
 
     @Override
     public VideogameResponse entityToDto(Videogame videogame) {
-        return null;
+        return new VideogameResponse(
+                videogame.getId(),
+                videogame.getName(),
+                videogame.getCategory(),
+                videogame.getIsAdult(),
+                videogame.getPlatform(),
+                videogame.getYear()
+        );
     }
 }

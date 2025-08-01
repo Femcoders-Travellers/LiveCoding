@@ -26,7 +26,7 @@ public class Videogame {
     private String platform;
 
     @Column(nullable = false)
-    private Long year;
+    private int year;
 
     @ManyToOne
     @JoinColumn(name = "developer_id", nullable = false)
